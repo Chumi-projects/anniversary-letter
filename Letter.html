@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Love - 2 Years Anniversary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Gold Floral Corner Decorations */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        body::before {
+            top: -50px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M10,10 Q30,5 40,20 T60,40 Q70,50 80,45 T100,60 Q110,70 105,85'/%3E%3Ccircle cx='25' cy='25' r='15' stroke-width='0.3'/%3E%3Cpath d='M15,15 C20,10 30,15 35,20 C40,25 38,35 30,38 C22,41 15,35 15,25'/%3E%3Cpath d='M45,35 Q50,30 60,35 T75,45 Q80,50 75,60'/%3E%3Ccircle cx='55' cy='50' r='8' stroke-width='0.3'/%3E%3Cpath d='M70,20 Q75,15 85,20 C90,23 92,30 88,35 C84,40 75,42 70,38'/%3E%3Cpath d='M5,50 Q10,45 20,50 T35,65 Q40,72 38,80'/%3E%3Ccircle cx='15' cy='65' r='10' stroke-width='0.3'/%3E%3Cpath d='M50,70 C55,65 65,68 70,75 Q75,82 70,90 C65,95 55,93 52,85'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        body::after {
+            bottom: -50px;
+            right: -50px;
+            width: 400px;
+            height: 400px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M190,190 Q170,195 160,180 T140,160 Q130,150 120,155 T100,140 Q90,130 95,115'/%3E%3Ccircle cx='175' cy='175' r='15' stroke-width='0.3'/%3E%3Cpath d='M185,185 C180,190 170,185 165,180 C160,175 162,165 170,162 C178,159 185,165 185,175'/%3E%3Cpath d='M155,165 Q150,170 140,165 T125,155 Q120,150 125,140'/%3E%3Ccircle cx='145' cy='150' r='8' stroke-width='0.3'/%3E%3Cpath d='M130,180 Q125,185 115,180 C110,177 108,170 112,165 C116,160 125,158 130,162'/%3E%3Cpath d='M195,150 Q190,155 180,150 T165,135 Q160,128 162,120'/%3E%3Ccircle cx='185' cy='135' r='10' stroke-width='0.3'/%3E%3Cpath d='M150,130 C145,135 135,132 130,125 Q125,118 130,110 C135,105 145,107 148,115'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 30px;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(180deg, rgba(212,175,55,0.02) 0%, rgba(0,0,0,0) 100%);
+            border-left: 1px solid rgba(212,175,55,0.1);
+            border-right: 1px solid rgba(212,175,55,0.1);
+            min-height: 100vh;
+        }
+
+        /* Decorative top border */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        /* Decorative bottom border */
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 60px;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: clamp(1rem, 2vw, 1.125rem);
+            margin-bottom: 35px;
+            text-align: justify;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            line-height: 2;
+        }
+
+        p.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .teaser {
+            font-style: italic;
+            color: #D4AF37;
+            text-align: center;
+            font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+            margin: 50px 0;
+            font-weight: 400;
+        }
+
+        .closing {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 2.8vw, 1.8rem);
+            font-weight: 600;
+            text-align: center;
+            color: #D4AF37;
+            margin-top: 60px;
+            margin-bottom: 80px;
+            letter-spacing: 2px;
+        }
+
+        /* Subtle gold accent line between paragraphs */
+        p + p::before {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+            margin: 0 auto 35px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 60px 25px;
+            }
+
+            body::before,
+            body::after {
+                width: 250px;
+                height: 250px;
+            }
+
+            h1 {
+                margin-bottom: 40px;
+            }
+
+            p {
+                text-align: left;
+                margin-bottom: 30px;
+            }
+
+            .teaser,
+            .closing {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body::before,
+            body::after {
+                opacity: 0.08;
+            }
+        }
+
+        /* Smooth scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212,175,55,0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212,175,55,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To my Girlfriend, Lover, Friend, future wife, cheerleader, confidant and sometimes funny annoyer.</h1>
+
+        <p class="fade-element">Two years ago, we nervously (and yes I mean the both of us) looked into each other's eyes and promised love to one another, and that promise is going 2 years strong. Throughout these 2 years we've seen each other grow and learn and see more reasons to love one another. Even in our imperfect moments we still choose one another, and that makes my heart stir.</p>
+
+        <p class="fade-element">Whenever I think about you my heart still flutters… it forever will because whenever I look into your eyes I see all of the warmth ahead of us, all of the memories we will make, especially the private wedding (Pregnant mother nature theme (green) or golden, to show that our souls will be forever bright and bound by love).</p>
+
+        <p class="fade-element">Throughout our lives I look forward to supporting you, through your dreams, ambitions, and everyday life. I'll support you no matter where you go, no matter how you feel. My love of supporting you has existed since that basketball game you had. I held up a sign that declares my love and support for you. After that game I was happy I contributed to your performance. Although you were embarrassed a bit, you can't lie you love it.</p>
+
+        <p class="fade-element">Whenever winter comes my feelings for you get more intense. The rain takes me back to the times we walked together in it. I remember when we kissed in the rain it felt so cinematic, and I loved the look in your eyes, you looked completely relaxed. That relaxation was quickly followed by a pure panic due to the rain; you actually ran away leaving the scene incomplete. I then fell on my knees and as I looked up in the sky the heavens were crying with me.</p>
+
+        <p class="teaser fade-element">How about we finish that scene, without the rain of course…</p>
+
+        <p class="fade-element">Before I wrap up the letter, let's go back in time to where it all started, well officially: I was staring at the floor withdrawn from my environment, it felt as if my soul left my body. My heart ached at the possibility of not experiencing my life with you. I called for your attention. We held hands for the first time; my hands were shaking and SLIGHTLY sweating. Till this day I remember that bright light reflecting off your eyes. The beauty of your eyes certainly did not help my ALLEGED nervousness. On that day my heart defied my body, and the words "Will you be my Girlfriend" passed my lips. I don't remember what you said after that as everything got blurry, but I felt each letter that came from your lips.</p>
+
+        <p class="fade-element">Even now as I write this the same heart that yearned for you then, craves and beats for you now.</p>
+
+        <p class="closing fade-element">I love you Truly. Madly. Deeply.</p>
+    </div>
+
+    <script>
+        // Intersection Observer for fade-in scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all paragraph elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-element');
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
