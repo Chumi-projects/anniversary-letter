@@ -27,34 +27,24 @@
             line-height: 1.8;
             overflow-x: hidden;
             position: relative;
+            background-image: url('/mnt/user-data/uploads/1779664974414_image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        /* Gold Floral Corner Decorations */
-        body::before,
-        body::after {
+        /* Dark overlay for better text readability */
+        body::before {
             content: '';
             position: fixed;
-            background-repeat: no-repeat;
-            background-size: contain;
-            pointer-events: none;
-            opacity: 0.15;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1;
-        }
-
-        body::before {
-            top: -50px;
-            left: -50px;
-            width: 400px;
-            height: 400px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M10,10 Q30,5 40,20 T60,40 Q70,50 80,45 T100,60 Q110,70 105,85'/%3E%3Ccircle cx='25' cy='25' r='15' stroke-width='0.3'/%3E%3Cpath d='M15,15 C20,10 30,15 35,20 C40,25 38,35 30,38 C22,41 15,35 15,25'/%3E%3Cpath d='M45,35 Q50,30 60,35 T75,45 Q80,50 75,60'/%3E%3Ccircle cx='55' cy='50' r='8' stroke-width='0.3'/%3E%3Cpath d='M70,20 Q75,15 85,20 C90,23 92,30 88,35 C84,40 75,42 70,38'/%3E%3Cpath d='M5,50 Q10,45 20,50 T35,65 Q40,72 38,80'/%3E%3Ccircle cx='15' cy='65' r='10' stroke-width='0.3'/%3E%3Cpath d='M50,70 C55,65 65,68 70,75 Q75,82 70,90 C65,95 55,93 52,85'/%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        body::after {
-            bottom: -50px;
-            right: -50px;
-            width: 400px;
-            height: 400px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M190,190 Q170,195 160,180 T140,160 Q130,150 120,155 T100,140 Q90,130 95,115'/%3E%3Ccircle cx='175' cy='175' r='15' stroke-width='0.3'/%3E%3Cpath d='M185,185 C180,190 170,185 165,180 C160,175 162,165 170,162 C178,159 185,165 185,175'/%3E%3Cpath d='M155,165 Q150,170 140,165 T125,155 Q120,150 125,140'/%3E%3Ccircle cx='145' cy='150' r='8' stroke-width='0.3'/%3E%3Cpath d='M130,180 Q125,185 115,180 C110,177 108,170 112,165 C116,160 125,158 130,162'/%3E%3Cpath d='M195,150 Q190,155 180,150 T165,135 Q160,128 162,120'/%3E%3Ccircle cx='185' cy='135' r='10' stroke-width='0.3'/%3E%3Cpath d='M150,130 C145,135 135,132 130,125 Q125,118 130,110 C135,105 145,107 148,115'/%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
         }
 
         .container {
@@ -63,10 +53,11 @@
             padding: 80px 30px;
             position: relative;
             z-index: 2;
-            background: linear-gradient(180deg, rgba(212,175,55,0.02) 0%, rgba(0,0,0,0) 100%);
-            border-left: 1px solid rgba(212,175,55,0.1);
-            border-right: 1px solid rgba(212,175,55,0.1);
+            background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(0,0,0,0.3) 100%);
+            border-left: 1px solid rgba(212,175,55,0.2);
+            border-right: 1px solid rgba(212,175,55,0.2);
             min-height: 100vh;
+            backdrop-filter: blur(2px);
         }
 
         /* Decorative top border */
@@ -105,6 +96,7 @@
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1.2s ease forwards;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
 
         @keyframes fadeInUp {
@@ -122,6 +114,10 @@
             transform: translateY(40px);
             transition: opacity 0.8s ease, transform 0.8s ease;
             line-height: 2;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
         }
 
         p.fade-in {
@@ -155,7 +151,7 @@
             display: block;
             width: 60px;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent);
             margin: 0 auto 35px;
         }
 
@@ -165,12 +161,6 @@
                 padding: 60px 25px;
             }
 
-            body::before,
-            body::after {
-                width: 250px;
-                height: 250px;
-            }
-
             h1 {
                 margin-bottom: 40px;
             }
@@ -178,19 +168,13 @@
             p {
                 text-align: left;
                 margin-bottom: 30px;
+                padding: 15px;
             }
 
             .teaser,
             .closing {
                 margin-top: 40px;
                 margin-bottom: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body::before,
-            body::after {
-                opacity: 0.08;
             }
         }
 
